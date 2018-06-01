@@ -1,0 +1,37 @@
+{
+  "name": "greenkey-sdk",
+  "version": "1.0.0",
+  "description": "GreenKey Public SDK",
+  "main": "sdk.js",
+  "scripts": {
+    "lint": "eslint",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "jsdoc -u jsdoc/tutorials/ -c jsdoc/conf.json -t ./node_modules/ink-docstrap/template -R README.md sdk.js -d jsdoc/build && http-server jsdoc/build -o"
+  },
+  "contributors": [
+    {
+      "name": "Patrick Kuca",
+      "email": "pkuca@greenkeytech.com"
+    },
+    {
+      "name": "Rochad Tlusty",
+      "email": "rtlusty@greenkeytech.com"
+    }
+  ],
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@feathersjs/client": "^3.1.1",
+    "eventemitter2": "^5.0.1",
+    "localstorage-memory": "^1.0.2",
+    "sip.js": "^0.9.1",
+    "socket.io-client": "^2.0.4"
+  },
+  "devDependencies": {
+    "eslint": "^4.12.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "http-server": "^0.11.1",
+    "ink-docstrap": "^1.3.2",
+    "jsdoc": "^3.5.5"
+  }
+}
