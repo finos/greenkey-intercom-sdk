@@ -1,5 +1,9 @@
 # GreenKey SDK
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/01ee726a50dddf3596fb/maintainability)](https://codeclimate.com/github/finos-voice/greenkey-sdk/maintainability)
+
+---
+
 The GreenKey SDK is the easiest way to embed instant intercom communication into your application.
 With minimal setup,
 your app can have push-to-talk technology,
