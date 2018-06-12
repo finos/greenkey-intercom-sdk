@@ -66,3 +66,43 @@ for an explanation of the various functions contained therein.
 
 Other great resources are the [sdk examples](examples/)
 which use the SDK in simple, functional web pages with intercoms.
+
+## Contributing
+
+### Code of Conduct
+
+Please make sure you read and observe our [Code of Conduct].
+
+### Pull Request process
+
+1. Fork it
+1. Create your feature branch (`git checkout -b feature/fooBar`)
+1. Commit your changes (`git commit -am 'Add some fooBar'`)
+1. Push to the branch (`git push origin feature/fooBar`)
+1. Create a new Pull Request
+
+## Versioning
+
+We use [SemVer] for versioning.  For the versions available, see the [tags on this repository].
+
+## Authors
+
+Original authors:
+
+- [Patrick Kuca](https://github.com/pkuca)
+- [Rochad Tlusty](https://github.com/rochadt)
+- [Ashley Shultz](https://github.com/AGiantSquid)
+
+For all others who have aided this project, please see the [list of contributors].
+
+## License
+
+This project is licensed under the Apache 2.0 License - see the [LICENSE.md](LICENSE.md) file for details.
+
+<!-- Markdown link & img defs -->
+[FINOS]: https://www.finos.org
+[Code of Conduct]: https://www.finos.org/code-of-conduct
+[Voice Program]: https://finosfoundation.atlassian.net/wiki/spaces/VOICE/overview
+[SemVer]: http://semver.org
+[list of contributors]: https://github.com/finos-voice/greenkey-sdk/graphs/contributors
+[tags on this repository]: https://github.com/finos-voice/greenkey-sdk/tags
