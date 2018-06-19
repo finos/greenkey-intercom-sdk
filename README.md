@@ -27,7 +27,7 @@ please consider joining FINOS.
 
 ### Prerequisites
 
-- A recent version of node installed
+- Node.js 8.11.3 (LTS) or higher
 - A Node package manager (i.e. npm or yarn)
 - An API key: obtain a GreenKey API key by emailing your request to <mailto:sdk@greenkeytech.com>
 
