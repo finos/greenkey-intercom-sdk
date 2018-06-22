@@ -60,7 +60,7 @@ class GreenKey {
     }));
 
     this.authenticate = client.authenticate;
-    this.events = new EventEmitter2({ maxListeners: 4, wildcard: true });
+    this.events = new EventEmitter2({ maxListeners: 6, wildcard: true });
     this.logout = client.logout;
     this.services = { intercoms: client.service('intercoms'), users: client.service('users') };
 
@@ -177,6 +177,8 @@ class GreenKey {
     const events = [
       { service: 'intercoms', method: 'created' },
       { service: 'intercoms', method: 'patched' },
+      { service: 'intercoms', method: 'connected' },
+      { service: 'intercoms', method: 'disconnected' },
       { service: 'users', method: 'created' },
       { service: 'users', method: 'patched' },
     ];
