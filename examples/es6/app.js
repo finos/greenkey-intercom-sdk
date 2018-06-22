@@ -37,6 +37,7 @@ function genUserHTML(user) {
   return `
     <li class="level">
       <div class="level-left">
+        <span id="user-status-${user.id}" class="online-status-disconnected"></span>
         <div class="level-item">${user.id}</div>
       </div>
       <div class="level-right">
@@ -47,13 +48,41 @@ function genUserHTML(user) {
   `;
 }
 
-function initializeSession(voiceToken) {
+function initializeSession(authPayload) {
+  currentUser = authPayload.user;
   showBoard();
   startGKListeners();
-  initIntercoms(voiceToken);
+  initIntercoms(currentUser.voice_token);
+}
+
+function changeUserStatus(id, state) {
+  if (id === currentUser.id) { return };
+  const indicator = document.getElementById(`user-status-${id}`);
+  if (!indicator) {
+    window.setTimeout(() => {
+      changeUserStatus(id, state);
+    }, 100);
+    return;
+  }
+  switch (state) {
+    case 'connected':
+      indicator.classList = ['online-status-connected'];
+      break;
+    case 'disconnected':
+      indicator.classList = ['online-status-disconnected'];
+      break;
+  }
 }
 
 function startGKListeners() {
+  GK.events.on('intercoms.connected', (e) => {
+    console.log('intercoms.connected ::', e);
+    changeUserStatus(e.id, 'connected');
+  });
+  GK.events.on('intercoms.disconnected', (e) => {
+    console.log('intercoms.disconnected ::', e);
+    changeUserStatus(e.id, 'disconnected');
+  });
   GK.events.on('intercoms.created', (e) => {
     console.log('intercoms.created ::', e);
   });
@@ -98,12 +127,12 @@ async function initIntercoms(voiceToken) {
   }
 }
 
-document.addEventListener('DOMContentLoaded', async () => {
+window.addEventListener('load', async () => {
   try {
-    const res = await GK.startSession({});
+    const authPayload = await GK.startSession({});
     console.log('GreenKey ::', GK);
-    if (res && res.voice_token) {
-      initializeSession(res.voice_token);
+    if (authPayload) {
+      initializeSession(authPayload);
     } else {
       showLogin();
     }
@@ -118,8 +147,8 @@ document.addEventListener('click', async (ev) => {
       try {
         const passphrase = document.getElementById('pw-input').value;
         const userCreation = await GK.createUser({ passphrase });
-        const login = await GK.startSession({ apiKey, id: userCreation.id, passphrase });
-        initializeSession(login.voice_token);
+        const authPayload = await GK.startSession({ apiKey, id: userCreation.id, passphrase });
+        initializeSession(authPayload);
       } catch (e) {
         console.error(e);
 
@@ -137,8 +166,8 @@ document.addEventListener('click', async (ev) => {
         id = document.getElementById('id-input').value;
         const passphrase = document.getElementById('pw-input').value;
 
-        const login = await GK.startSession({ apiKey, id, passphrase });
-        initializeSession(login.voice_token);
+        const authPayload = await GK.startSession({ apiKey, id, passphrase });
+        initializeSession(authPayload);
       } catch (e) {
         console.error(e);
 
