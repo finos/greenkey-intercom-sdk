@@ -80,9 +80,14 @@ class GreenKey {
    */
   connectIntercoms({ id, endpoint, protocol, port }) {
     return new Promise((resolve) => {
+      const transportOptions = {
+        traceSip: false,
+        wsServers: [`${protocol}://${endpoint}:${port}`],
+      };
+
       const userAgent = new SIP.UA({
         uri: `${id}@${endpoint}`,
-        wsServers: [`${protocol}://${endpoint}:${port}`],
+        transportOptions,
         authorizationUser: '',
         password: '',
         userAgentString: `GreenKey-SDK/${this.version}`,
@@ -105,8 +110,8 @@ class GreenKey {
 
       userAgent.once('registered', () => {
         const { sessionDescriptionHandler } = this.voiceSession;
-        sessionDescriptionHandler.on('addStream', (streamEvent) => {
-          resolve(streamEvent.stream);
+        sessionDescriptionHandler.on('addTrack', (trackEvent) => {
+          resolve(trackEvent.streams[0]);
         });
       });
     });
