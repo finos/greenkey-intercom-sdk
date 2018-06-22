@@ -24,10 +24,10 @@
   ],
   "license": "Apache-2.0",
   "dependencies": {
-    "@feathersjs/client": "^3.1.1",
+    "@feathersjs/client": "^3.5.2",
     "eventemitter2": "^5.0.1",
     "localstorage-memory": "^1.0.2",
-    "sip.js": "^0.9.1",
+    "sip.js": "^0.11.0",
     "socket.io-client": "^2.0.4"
   },
   "devDependencies": {
