@@ -242,8 +242,10 @@ class GreenKey {
   stopSession() {
     return new Promise(async (resolve, reject) => {
       try {
+        if (this.voiceSession) {
+          await this.voiceSession.terminate();
+        }
         await this.stopListeners();
-        await this.voiceSession.terminate();
         resolve(this.logout());
       } catch (e) {
         reject(e);
