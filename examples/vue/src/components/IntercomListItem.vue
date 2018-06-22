@@ -1,6 +1,14 @@
 <template>
   <li class="level">
     <div class="level-left">
+      <span
+        v-if="!user.online"
+        class="online-status-disconnected">
+      </span>
+      <span
+        v-else-if="user.online"
+        class="online-status-connected">
+      </span>
       <div class="level-item">
         {{ user.id }}
       </div>
@@ -37,6 +45,7 @@ export default {
       type: Object,
       default: () => ({
         id: '',
+        online: false,
       }),
     },
     gk: {
@@ -47,8 +56,6 @@ export default {
   data() {
     return {
       liveIntercom: null,
-      activeClass: 'is-danger',
-      inactiveClass: 'is-success',
     };
   },
   methods: {
@@ -79,3 +86,27 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+
+.online-status-connected {
+  content: '';
+  position: relative;
+  width: 20px;
+  height: 20px;
+  left: -20px;
+  border-radius: 50%;
+  background: green;
+}
+
+.online-status-disconnected {
+  content: '';
+  position: relative;
+  width: 20px;
+  height: 20px;
+  left: -20px;
+  border-radius: 50%;
+  background: gray;
+}
+
+</style>
