@@ -5,6 +5,7 @@ import GreenKey from 'greenkey-sdk';
 const endpoint = 'replace me';
 const GK = new GreenKey(`https://${endpoint}`);
 
+let currentUser;
 let liveIntercom;
 
 function showLogin(error = {}) {
@@ -27,7 +28,7 @@ async function showBoard() {
 
 function addUser(user) {
   const userList = document.querySelector('.user-list');
-  if (userList) {
+  if (userList && user.id !== currentUser.id) {
     userList.insertAdjacentHTML('beforeend', genUserHTML(user));
   }
 }
