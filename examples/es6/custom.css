@@ -1,0 +1,19 @@
+.online-status-connected {
+  content: '';
+  position: relative;
+  width: 20px;
+  height: 20px;
+  left: -20px;
+  border-radius: 50%;
+  background: green;
+}
+
+.online-status-disconnected{
+  content: '';
+  position: relative;
+  width: 20px;
+  height: 20px;
+  left: -20px;
+  border-radius: 50%;
+  background: gray;
+}

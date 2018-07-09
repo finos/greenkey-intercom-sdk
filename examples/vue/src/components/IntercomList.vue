@@ -8,7 +8,7 @@
         <div class="column is-one-third">
           <ul class="user-list">
             <IntercomListItem
-              v-for="user of users"
+              v-for="user of users" v-if="currentUser.id !== user.id"
               :key="user.id"
               :user="user"
               :gk="gk"
@@ -31,6 +31,10 @@ export default {
     IntercomListItem,
   },
   props: {
+    currentUser: {
+      type: Object,
+      required: true,
+    },
     users: {
       type: Array,
       default: () => [],

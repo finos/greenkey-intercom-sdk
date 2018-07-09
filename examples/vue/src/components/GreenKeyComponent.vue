@@ -11,6 +11,7 @@
       <IntercomList
         v-if="userLoggedIn"
         :users="users"
+        :currentUser="currentUser"
         :gk="gk"
       />
       <TheFooter
@@ -46,6 +47,7 @@ export default {
   },
   data() {
     return {
+      currentUser: {},
       userLoggedIn: false,
       users: [],
       gk,
@@ -55,8 +57,8 @@ export default {
   methods: {
     async loginUser(event) {
       try {
-        const login = await this.gk.startSession(event);
-        this.initializeSession(login.voice_token);
+        const authPayload = await this.gk.startSession(event);
+        this.initializeSession(authPayload);
       } catch (e) {
         this.loginError = e.message;
         console.error(e);
@@ -66,23 +68,30 @@ export default {
       const { passphrase } = event;
       try {
         const userCreation = await gk.createUser({ passphrase });
-        const login = await this.gk.startSession({
+        const authPayload = await this.gk.startSession({
           apiKey: event.apiKey,
           id: userCreation.id,
           passphrase,
         });
-        this.initializeSession(login.voice_token);
+        this.initializeSession(authPayload);
       } catch (e) {
         this.loginError = e.message;
         console.error(e);
       }
     },
-    async initializeSession(voiceToken) {
+    async initializeSession(authPayload) {
+      this.currentUser = authPayload.user;
       this.userLoggedIn = true;
+
       this.startGKListeners();
-      this.initIntercoms(voiceToken);
+      this.initIntercoms(authPayload.user.voice_token);
+
+      this.users = [];
       const usersData = await this.gk.findUsers();
-      this.users = usersData.data;
+      usersData.data.forEach((user) => {
+        user.online = false;
+        this.users.push(user);
+      });
     },
     startGKListeners() {
       gk.events.on('intercoms.created', (e) => {
@@ -90,6 +99,26 @@ export default {
       });
       gk.events.on('intercoms.patched', (e) => {
         console.log('intercoms.patched ::', e);
+      });
+      gk.events.on('intercoms.connected', (e) => {
+        console.log('intercoms.connected ::', e);
+        for (let u of this.users) {
+          if (u.id === e.id) {
+            if (u.online === undefined || !u.online) {
+              u.online = true;
+            }
+          }
+        }
+      });
+      gk.events.on('intercoms.disconnected', (e) => {
+        console.log('intercoms.disconnected ::', e);
+        for (let u of this.users) {
+          if (u.id === e.id) {
+            if (u.online === undefined || u.online) {
+              u.online = false;
+            }
+          }
+        }
       });
       gk.events.on('users.created', (e) => {
         console.log('users.created ::', e);
@@ -120,9 +149,11 @@ export default {
       try {
         await this.gk.stopSession();
         this.stopGKListeners();
+        this.currentUser = {};
         this.userLoggedIn = false;
       } catch (e) {
         console.error(e);
+        this.currentUser = {};
         this.userLoggedIn = false;
       }
     },

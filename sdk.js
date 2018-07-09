@@ -39,7 +39,7 @@ class GreenKey {
    * @param {string} endpointURL - The API endpoint URL
    */
   constructor(endpointURL) {
-    this.version = '0.0.1';
+    this.version = '0.0.2';
     this.connectToAPI(endpointURL);
   }
 
@@ -60,7 +60,7 @@ class GreenKey {
     }));
 
     this.authenticate = client.authenticate;
-    this.events = new EventEmitter2({ maxListeners: 4, wildcard: true });
+    this.events = new EventEmitter2({ maxListeners: 6, wildcard: true });
     this.logout = client.logout;
     this.services = { intercoms: client.service('intercoms'), users: client.service('users') };
 
@@ -80,9 +80,14 @@ class GreenKey {
    */
   connectIntercoms({ id, endpoint, protocol, port }) {
     return new Promise((resolve) => {
+      const transportOptions = {
+        traceSip: false,
+        wsServers: [`${protocol}://${endpoint}:${port}`],
+      };
+
       const userAgent = new SIP.UA({
         uri: `${id}@${endpoint}`,
-        wsServers: [`${protocol}://${endpoint}:${port}`],
+        transportOptions,
         authorizationUser: '',
         password: '',
         userAgentString: `GreenKey-SDK/${this.version}`,
@@ -105,8 +110,8 @@ class GreenKey {
 
       userAgent.once('registered', () => {
         const { sessionDescriptionHandler } = this.voiceSession;
-        sessionDescriptionHandler.on('addStream', (streamEvent) => {
-          resolve(streamEvent.stream);
+        sessionDescriptionHandler.on('addTrack', (trackEvent) => {
+          resolve(trackEvent.streams[0]);
         });
       });
     });
@@ -172,6 +177,8 @@ class GreenKey {
     const events = [
       { service: 'intercoms', method: 'created' },
       { service: 'intercoms', method: 'patched' },
+      { service: 'intercoms', method: 'connected' },
+      { service: 'intercoms', method: 'disconnected' },
       { service: 'users', method: 'created' },
       { service: 'users', method: 'patched' },
     ];
@@ -237,8 +244,10 @@ class GreenKey {
   stopSession() {
     return new Promise(async (resolve, reject) => {
       try {
+        if (this.voiceSession) {
+          await this.voiceSession.terminate();
+        }
         await this.stopListeners();
-        await this.voiceSession.terminate();
         resolve(this.logout());
       } catch (e) {
         reject(e);
