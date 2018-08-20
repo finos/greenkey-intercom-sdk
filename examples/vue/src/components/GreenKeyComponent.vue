@@ -28,7 +28,7 @@
 
 <script>
 /* eslint-disable no-console */
-import GreenKey from 'greenkey-sdk';
+import GreenKey from 'greenkey-voice-sdk';
 import TheNavigationBar from './TheNavigationBar';
 import LoginComponent from './LoginComponent';
 import IntercomList from './IntercomList';

@@ -1,4 +1,4 @@
-# GreenKey Public SDK Example - Vue.js 2.0
+# GreenKey Voice SDK Example - Vue.js 2.0
 
 This repository contains an example of using the Vue 2.0 framework to communicate with the GreenKey Voice backend.
 

@@ -1,7 +1,7 @@
 {
-  "name": "sdk-example-es6",
+  "name": "greenkey-voice-sdk-example-es6",
   "version": "1.0.0",
-  "description": "GreenKey Public SDK Example - ES6",
+  "description": "GreenKey Voice SDK Example - ES6",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,7 +15,7 @@
   ],
   "license": "Apache-2.0",
   "dependencies": {
-    "greenkey-sdk": "file:../../"
+    "greenkey-voice-sdk": "file:../../"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

@@ -1,7 +1,7 @@
 {
-  "name": "greenkey-sdk",
+  "name": "greenkey-voice-sdk",
   "version": "1.0.0",
-  "description": "GreenKey Public SDK",
+  "description": "GreenKey Voice SDK",
   "main": "sdk.js",
   "scripts": {
     "lint": "eslint",
