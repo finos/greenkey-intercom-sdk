@@ -19,7 +19,7 @@ yarn -v
 
 Clone the repository, then install local dependencies from the root:
 ```bash
-cd sdk-example-es6
+cd examples/es6
 yarn
 ```
 
