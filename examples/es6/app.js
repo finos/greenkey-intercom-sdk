@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 /* global document */
-import GreenKey from 'greenkey-sdk';
+import GreenKey from 'greenkey-voice-sdk';
 
 const endpoint = 'replace me';
 const GK = new GreenKey(`https://${endpoint}`);
@@ -231,7 +231,7 @@ const headerHTML = `
     <header class="navbar">
       <div class="container">
         <div class="navbar-brand" style="border-bottom: 1px solid #45D43C;">
-          <a class="navbar-item">GreenKey SDK - ES6</a>
+          <a class="navbar-item">GreenKey Voice SDK - ES6</a>
         </div>
       </div>
     </header>

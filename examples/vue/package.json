@@ -1,5 +1,5 @@
 {
-  "name": "sdk-example-vue",
+  "name": "greenkey-voice-sdk-example-vue",
   "description": "An example of the GreenKey SDK with Vue.js 2.0",
   "version": "1.0.0",
   "author": "AGiantSquid <ashley.e.shultz@gmail.com>",
@@ -10,7 +10,7 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
-    "greenkey-sdk": "file:../../",
+    "greenkey-voice-sdk": "file:../../",
     "vue": "^2.5.11"
   },
   "browserslist": [

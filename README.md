@@ -1,13 +1,13 @@
-# GreenKey SDK
+# GreenKey Voice SDK
 > Voice-enable your front-end apps with instant intercoms
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/01ee726a50dddf3596fb/maintainability)](https://codeclimate.com/github/finos-voice/greenkey-sdk/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/01ee726a50dddf3596fb/maintainability)](https://codeclimate.com/github/finos-voice/greenkey-voice-sdk/maintainability)
 
-<img src="https://github.com/finos-voice/greenkey-sdk/raw/master/logo/greenkey-logo.png" width="100" />
+<img src="https://github.com/finos-voice/greenkey-voice-sdk/raw/master/logo/greenkey-logo.png" width="100" />
 
 ---
 
-The GreenKey SDK
+The GreenKey Voice SDK
 is the easiest way to embed instant intercom communication into your application.
 With minimal setup,
 your app can have push-to-talk technology,
@@ -17,7 +17,7 @@ to collaborate with colleagues in your community.
 This SDK provides front-end libraries and components
 which leverage the GreenKey telephony backend.
 
-The GreenKey SDK
+The GreenKey Voice SDK
 is hosted by the [Voice Program] of the Fintech Open Source Foundation ([FINOS]).
 If you are a company interested in the evolution of
 open standards, interoperability, and innovation in the financial services sector,
@@ -39,7 +39,7 @@ In the `package.json` file for your project, list the SDK as a dependency, and t
 
 ```json
   "dependencies": {
-    "greenkey-sdk": "file:../sdk"
+    "greenkey-voice-sdk": "file:../sdk"
   },
 ```
 
@@ -47,7 +47,7 @@ Then, from the top level directory of your project, run a command to install you
 
 `npm install` or `yarn `
 
-After that, the `greenkey-sdk` should be added to your project's `node_modules/` folder.
+After that, the `greenkey-voice-sdk` should be added to your project's `node_modules/` folder.
 
 Before the SDK will work,
 you will need to point it toward a URL endpoint
@@ -58,7 +58,7 @@ the GreenKey class in the SDK.
 
 See the [example projects](examples/) for the constants to set accordingly.
 
-You are now ready to begin using the GreenKey SDK!
+You are now ready to begin using the GreenKey Voice SDK!
 
 ## Learning
 
@@ -114,5 +114,5 @@ This project is licensed under the Apache 2.0 License - see the [LICENSE.md](LIC
 [Code of Conduct]: https://www.finos.org/code-of-conduct
 [Voice Program]: https://finosfoundation.atlassian.net/wiki/spaces/VOICE/overview
 [SemVer]: http://semver.org
-[list of contributors]: https://github.com/finos-voice/greenkey-sdk/graphs/contributors
-[tags on this repository]: https://github.com/finos-voice/greenkey-sdk/tags
+[list of contributors]: https://github.com/finos-voice/greenkey-voice-sdk/graphs/contributors
+[tags on this repository]: https://github.com/finos-voice/greenkey-voice-sdk/tags

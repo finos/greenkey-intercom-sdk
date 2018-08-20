@@ -1,7 +1,7 @@
-After installing `greenkey-sdk.js` in your project, import it like any other module.
+After installing `greenkey-voice-sdk.js` in your project, import it like any other module.
 
 ```javascript
-import GreenKey from 'greenkey-sdk';
+import GreenKey from 'greenkey-voice-sdk';
 ```
 
 Then you can initialize it with the target endpoint.
