@@ -8,7 +8,7 @@
         <div class="column is-one-third">
           <ul class="user-list">
             <IntercomListItem
-              v-for="user of users" v-if="currentUser.id !== user.id"
+              v-for="user of otherUsers"
               :key="user.id"
               :user="user"
               :gk="gk"
@@ -42,7 +42,12 @@ export default {
     gk: {
       type: Object,
       required: true,
-    },
+    }
+  },
+  computed: {
+    otherUsers: function () {
+      return this.users.filter(u => u != this.currentUser.id)
+    }
   },
   data() {
     return {
