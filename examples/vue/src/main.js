@@ -5,6 +5,5 @@ import GreenKeyComponent from './components/GreenKeyComponent'
 Vue.component('GreenKeyComponent', GreenKeyComponent);
 
 new Vue({
-  el: '#app',
-  render: h => h(App)
-})
+  render: h => h(App),
+}).$mount('#app')

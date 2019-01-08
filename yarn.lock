@@ -2,78 +2,10 @@
 # yarn lockfile v1
 
 
-"@feathersjs/authentication-client@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@feathersjs/authentication-client/-/authentication-client-1.0.1.tgz#7eab1247dad4455feb85c6b5f4560e81d10d4e26"
-  dependencies:
-    "@feathersjs/errors" "^3.0.0"
-    debug "^3.1.0"
-    jwt-decode "^2.1.0"
-
-"@feathersjs/client@^3.1.1":
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/@feathersjs/client/-/client-3.1.2.tgz#426cd623a7f37b9e2a59b7a32f96e018db3be222"
-  dependencies:
-    "@feathersjs/authentication-client" "1.0.1"
-    "@feathersjs/errors" "3.2.0"
-    "@feathersjs/feathers" "3.0.3"
-    "@feathersjs/primus-client" "1.0.1"
-    "@feathersjs/rest-client" "1.3.2"
-    "@feathersjs/socketio-client" "1.0.1"
-
-"@feathersjs/commons@^1.2.0":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@feathersjs/commons/-/commons-1.3.1.tgz#4fb8a9e430b9031fb56f8fd3ac29871ab01c62c8"
-
-"@feathersjs/errors@3.2.0":
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/@feathersjs/errors/-/errors-3.2.0.tgz#aaa504499ffb643d5410bb430076719dd36b6a59"
-  dependencies:
-    debug "^3.1.0"
-
-"@feathersjs/errors@^3.0.0":
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/@feathersjs/errors/-/errors-3.2.1.tgz#5d1a45b78d72af656149f3d29ac4bb25fd3b5f17"
-  dependencies:
-    debug "^3.1.0"
-
-"@feathersjs/feathers@3.0.3":
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/@feathersjs/feathers/-/feathers-3.0.3.tgz#1fe1d5abce0b96a8e6970cf96749e6d514fa4e8a"
-  dependencies:
-    "@feathersjs/commons" "^1.2.0"
-    debug "^3.1.0"
-    events "^1.1.1"
-    uberproto "^1.2.0"
-
-"@feathersjs/primus-client@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@feathersjs/primus-client/-/primus-client-1.0.1.tgz#385ef96bb94f83304722039696891669c17b5e5c"
-  dependencies:
-    "@feathersjs/socket-commons" "^3.0.0"
-
-"@feathersjs/rest-client@1.3.2":
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/@feathersjs/rest-client/-/rest-client-1.3.2.tgz#8440fe5faa949a8b100949c397596005a6220ac4"
-  dependencies:
-    "@feathersjs/commons" "^1.2.0"
-    "@feathersjs/errors" "^3.0.0"
-    qs "^6.5.0"
-
-"@feathersjs/socket-commons@^3.0.0":
-  version "3.1.5"
-  resolved "https://registry.yarnpkg.com/@feathersjs/socket-commons/-/socket-commons-3.1.5.tgz#c45447f97395b1c93e3c0885a4c35ca84f83667a"
-  dependencies:
-    "@feathersjs/errors" "^3.0.0"
-    debug "^3.1.0"
-    lodash "^4.17.4"
-    url-pattern "^1.0.3"
-
-"@feathersjs/socketio-client@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@feathersjs/socketio-client/-/socketio-client-1.0.1.tgz#f98e00d39864b6a0a0f63c9b958e17a3f9cf8311"
-  dependencies:
-    "@feathersjs/socket-commons" "^3.0.0"
+"@feathersjs/client@^3.5.2":
+  version "3.7.7"
+  resolved "https://registry.yarnpkg.com/@feathersjs/client/-/client-3.7.7.tgz#c9835b9d177384baad7300953affa261a0ff0c37"
+  integrity sha512-xCD+8Sd495GglSUOxHh6qS55Strgd6mUszumRSFjCwI9Fqz6AXKMWbWAIs2SAmDvYnoNGsrGZxnWNK4qXoYTJg==
 
 acorn-jsx@^3.0.0:
   version "3.0.1"
@@ -327,6 +259,11 @@ cross-spawn@^5.1.0:
     shebang-command "^1.2.0"
     which "^1.2.9"
 
+crypto-js@^3.1.9-1:
+  version "3.1.9-1"
+  resolved "https://registry.yarnpkg.com/crypto-js/-/crypto-js-3.1.9-1.tgz#fda19e761fc077e01ffbfdc6e9fdfc59e8806cd8"
+  integrity sha1-/aGedh/Ad+Af+/3G6f38WeiAbNg=
+
 debug@^2.2.0, debug@^2.6.8, debug@^2.6.9, debug@~2.6.4, debug@~2.6.9:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
@@ -576,10 +513,6 @@ eventemitter2@^5.0.1:
 eventemitter3@1.x.x:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-1.2.0.tgz#1c86991d816ad1e504750e73874224ecf3bec508"
-
-events@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/events/-/events-1.1.1.tgz#9ebdb7635ad099c70dcc4c2a1f5004288e8bd924"
 
 external-editor@^2.0.4:
   version "2.1.0"
@@ -888,10 +821,6 @@ json-stable-stringify-without-jsonify@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/json-stable-stringify-without-jsonify/-/json-stable-stringify-without-jsonify-1.0.1.tgz#9db7b59496ad3f3cfef30a75142d2d930ad72651"
 
-jwt-decode@^2.1.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/jwt-decode/-/jwt-decode-2.2.0.tgz#7d86bd56679f58ce6a84704a657dd392bba81a79"
-
 klaw@~2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/klaw/-/klaw-2.0.0.tgz#59c128e0dc5ce410201151194eeb9cbf858650f6"
@@ -1059,10 +988,6 @@ optionator@^0.8.2:
     type-check "~0.3.2"
     wordwrap "~1.0.0"
 
-options@>=0.0.5:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/options/-/options-0.0.6.tgz#ec22d312806bb53e731773e7cdaefcf1c643128f"
-
 os-tmpdir@~1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/os-tmpdir/-/os-tmpdir-1.0.2.tgz#bbe67406c79aa85c5cfec766fe5734555dfa1274"
@@ -1189,10 +1114,6 @@ pseudomap@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/pseudomap/-/pseudomap-1.0.2.tgz#f052a28da70e618917ef0a8ac34c1ae5a68286b3"
 
-qs@^6.5.0:
-  version "6.5.1"
-  resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.1.tgz#349cdf6eef89ec45c12d7d5eb3fc0c870343a6d8"
-
 qs@~2.3.3:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/qs/-/qs-2.3.3.tgz#e9e85adbe75da0bbe4c8e0476a086290f863b404"
@@ -1314,11 +1235,12 @@ signal-exit@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
 
-sip.js@^0.9.1:
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/sip.js/-/sip.js-0.9.2.tgz#50205031fcb863d4f3fe408792b82faf1e32e4f7"
+sip.js@^0.11.0:
+  version "0.11.6"
+  resolved "https://registry.yarnpkg.com/sip.js/-/sip.js-0.11.6.tgz#a5e748307d2b0f1dd9e8f1365893d771a7e72f8e"
+  integrity sha512-ZxD3h6gpT4LYaG3ihFb5U3gOGGz+ObiNnzDgOlyCyu0zXZTqvzGSnfbXwIsGCES/N0z+K4tG21GhWpdUr2F7Ig==
   dependencies:
-    ws "^1.0.1"
+    crypto-js "^3.1.9-1"
   optionalDependencies:
     promiscuous "^0.6.0"
 
@@ -1476,14 +1398,6 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-uberproto@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/uberproto/-/uberproto-1.2.0.tgz#61d4eab024f909c4e6ea52be867c4894a4beeb76"
-
-ultron@1.0.x:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/ultron/-/ultron-1.0.2.tgz#ace116ab557cd197386a4e88f4685378c8b2e4fa"
-
 ultron@~1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ultron/-/ultron-1.1.1.tgz#9fe1536a10a664a65266a1e3ccf85fd36302bc9c"
@@ -1511,10 +1425,6 @@ union@~0.4.3:
 url-join@^2.0.2:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/url-join/-/url-join-2.0.5.tgz#5af22f18c052a000a48d7b82c5e9c2e2feeda728"
-
-url-pattern@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/url-pattern/-/url-pattern-1.0.3.tgz#0409292471b24f23c50d65a47931793d2b5acfc1"
 
 util-deprecate@~1.0.1:
   version "1.0.2"
@@ -1550,13 +1460,6 @@ write@^0.2.1:
   resolved "https://registry.yarnpkg.com/write/-/write-0.2.1.tgz#5fc03828e264cea3fe91455476f7a3c566cb0757"
   dependencies:
     mkdirp "^0.5.1"
-
-ws@^1.0.1:
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-1.1.5.tgz#cbd9e6e75e09fc5d2c90015f21f0c40875e0dd51"
-  dependencies:
-    options ">=0.0.5"
-    ultron "1.0.x"
 
 ws@~3.3.1:
   version "3.3.3"

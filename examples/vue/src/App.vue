@@ -1,5 +1,5 @@
 <template>
   <div id="app">
-  	<GreenKeyComponent/>
+    <GreenKeyComponent/>
   </div>
 </template>

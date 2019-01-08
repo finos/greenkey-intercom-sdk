@@ -34,7 +34,7 @@ import LoginComponent from './LoginComponent';
 import IntercomList from './IntercomList';
 import TheFooter from './TheFooter';
 
-const endpoint = 'voice-sandbox.greenkeytech.com';
+const endpoint = 'replace me';
 const gk = new GreenKey(`https://${endpoint}`);
 
 export default {

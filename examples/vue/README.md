@@ -23,7 +23,7 @@ cd examples/vue
 yarn
 ```
 
-Retrieve the public endpoint by [contacting GreenKey](http://greenkeytech.com/contact-us), then add your given endpoint URL to line 40 of TheMainPage.js:
+Retrieve the public endpoint by [contacting GreenKey](http://greenkeytech.com/contact-us), then add your given endpoint URL to line 37 of `GreenKeyComponent.vue` (located in `greenkey-voice-sdk/examples/vue/src/components/GreenKeyComponent.vue`:
 ```javascript
 const endpoint = 'some-endpoint.greenkeytech.com';
 ```
