@@ -1,3 +1,9 @@
+<style scoped>
+.navbar-brand {
+  border-bottom: 1px solid #45D43C;
+}
+</style>
+
 <template>
   <div class="hero-head">
     <header class="navbar">
@@ -15,3 +21,4 @@ export default {
   name: 'TheNavigationBar',
 };
 </script>
+
