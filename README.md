@@ -4,7 +4,7 @@
 
 > Voice-enable your front-end apps with instant intercoms
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/01ee726a50dddf3596fb/maintainability)](https://codeclimate.com/github/finos/greenkey-voice-sdk/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/9412fdf333ef16f48ed6/maintainability)](https://codeclimate.com/github/finos/greenkey-voice-sdk/maintainability)
 
 <img src="https://github.com/finos/greenkey-voice-sdk/raw/master/logo/greenkey-logo.png" width="132" />
 
