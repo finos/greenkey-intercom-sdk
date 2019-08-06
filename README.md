@@ -1,4 +1,7 @@
 # GreenKey Voice SDK
+
+**NOTE**:  This project has been archived.  If anyone has any interest in using or continuing development, please contact the maintainers at <mailto:sdk@greenkeytech.com>
+
 > Voice-enable your front-end apps with instant intercoms
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/01ee726a50dddf3596fb/maintainability)](https://codeclimate.com/github/finos-voice/greenkey-voice-sdk/maintainability)
