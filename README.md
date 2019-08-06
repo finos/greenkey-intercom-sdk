@@ -1,9 +1,12 @@
 # GreenKey Voice SDK
+
+**NOTE**:  This project has been archived.  If anyone has any interest in using or continuing development, please contact the maintainers at <mailto:sdk@greenkeytech.com>
+
 > Voice-enable your front-end apps with instant intercoms
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/01ee726a50dddf3596fb/maintainability)](https://codeclimate.com/github/finos-voice/greenkey-voice-sdk/maintainability)
 
-<img src="https://github.com/finos-voice/greenkey-voice-sdk/raw/master/logo/greenkey-logo.png" width="100" />
+<img src="https://github.com/finos/greenkey-voice-sdk/raw/master/logo/greenkey-logo.png" width="132" />
 
 ---
 
@@ -112,7 +115,7 @@ This project is licensed under the Apache 2.0 License - see the [LICENSE.md](LIC
 <!-- Markdown link & img defs -->
 [FINOS]: https://www.finos.org
 [Code of Conduct]: https://www.finos.org/code-of-conduct
-[Voice Program]: https://finosfoundation.atlassian.net/wiki/spaces/VOICE/overview
+[Voice Program]: https://github.com/finos-voice/voice-program
 [SemVer]: http://semver.org
-[list of contributors]: https://github.com/finos-voice/greenkey-voice-sdk/graphs/contributors
-[tags on this repository]: https://github.com/finos-voice/greenkey-voice-sdk/tags
+[list of contributors]: https://github.com/finos/greenkey-voice-sdk/graphs/contributors
+[tags on this repository]: https://github.com/finos/greenkey-voice-sdk/tags
