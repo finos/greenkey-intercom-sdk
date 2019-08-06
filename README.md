@@ -3,7 +3,7 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/01ee726a50dddf3596fb/maintainability)](https://codeclimate.com/github/finos-voice/greenkey-voice-sdk/maintainability)
 
-<img src="https://github.com/finos-voice/greenkey-voice-sdk/raw/master/logo/greenkey-logo.png" width="100" />
+<img src="https://github.com/finos/greenkey-voice-sdk/raw/master/logo/greenkey-logo.png" width="132" />
 
 ---
 
