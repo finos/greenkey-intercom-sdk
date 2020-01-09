@@ -9,7 +9,7 @@
     <header class="navbar">
       <div class="container">
         <div class="navbar-brand">
-          <a class="navbar-item">GreenKey Voice SDK - Vue2</a>
+          <a class="navbar-item">GreenKey Intercom SDK - Vue2</a>
         </div>
       </div>
     </header>

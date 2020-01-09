@@ -1,7 +1,7 @@
 {
-  "name": "greenkey-voice-sdk",
+  "name": "greenkey-intercom-sdk",
   "version": "1.0.0",
-  "description": "GreenKey Voice SDK",
+  "description": "GreenKey Intercom SDK",
   "main": "sdk.js",
   "scripts": {
     "lint": "eslint",

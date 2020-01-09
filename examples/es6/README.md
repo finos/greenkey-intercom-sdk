@@ -1,4 +1,4 @@
-# GreenKey Voice SDK Example - Vanilla ES6
+# GreenKey Intercom SDK Example - Vanilla ES6
 
 This repository contains an example of using Vanilla ES6 to communicate with the GreenKey Voice backend.
 
