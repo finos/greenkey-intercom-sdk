@@ -17,7 +17,7 @@
 /* global window */
 
 /**
- * @module  greenkey-voice-sdk
+ * @module  greenkey-intercom-sdk
  */
 import feathers from '@feathersjs/client';
 import EventEmitter2 from 'eventemitter2';
@@ -28,7 +28,7 @@ import SIP from 'sip.js';
 /**
  * Class used to create and interact with intercoms.
  * @example
- * import GreenKey from 'greenkey-voice-sdk';
+ * import GreenKey from 'greenkey-intercom-sdk';
  * const GK = new GreenKey('test.example.com');
  * @tutorial GreenKeyClass
  */
@@ -90,7 +90,7 @@ class GreenKey {
         transportOptions,
         authorizationUser: '',
         password: '',
-        userAgentString: `GreenKey-Voice-SDK/${this.version}`,
+        userAgentString: `GreenKey-Intercom-SDK/${this.version}`,
         log: { level: 1 },
       });
 

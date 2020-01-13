@@ -1,4 +1,4 @@
-# GreenKey Voice SDK Example - Vue.js 2.0
+# GreenKey Intercom SDK Example - Vue.js 2.0
 
 This repository contains an example of using the Vue 2.0 framework to communicate with the GreenKey Voice backend.
 
@@ -23,7 +23,7 @@ cd examples/vue
 yarn
 ```
 
-Retrieve the public endpoint by [contacting GreenKey](http://greenkeytech.com/contact-us), then add your given endpoint URL to line 37 of `GreenKeyComponent.vue` (located in `greenkey-voice-sdk/examples/vue/src/components/GreenKeyComponent.vue`:
+Retrieve the public endpoint by [contacting GreenKey](http://greenkeytech.com/contact-us), then add your given endpoint URL to line 37 of `GreenKeyComponent.vue` (located in `greenkey-intercom-sdk/examples/vue/src/components/GreenKeyComponent.vue`:
 ```javascript
 const endpoint = 'some-endpoint.greenkeytech.com';
 ```

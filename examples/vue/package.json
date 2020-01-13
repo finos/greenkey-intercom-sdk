@@ -1,5 +1,5 @@
 {
-  "name": "greenkey-voice-sdk-example-vue",
+  "name": "greenkey-intercom-sdk-example-vue",
   "description": "An example of the GreenKey SDK with Vue.js 2.0",
   "version": "1.1.0",
   "author": "AGiantSquid <ashley.e.shultz@gmail.com>",
@@ -12,7 +12,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "greenkey-voice-sdk": "file:../../",
+    "greenkey-intercom-sdk": "file:../../",
     "vue": "^2.5.11"
   },
   "devDependencies": {

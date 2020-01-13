@@ -1,13 +1,13 @@
 ### Before You Begin
 
- To use The GreenKey Voice SDK, you will need an API key for your account. [Contact a GreenKey administrator](http://greenkeytech.com/contact-us/) to obtain an API key for your development if you have not done so already. 
+ To use The GreenKey Intercom SDK, you will need an API key for your account. [Contact a GreenKey administrator](http://greenkeytech.com/contact-us/) to obtain an API key for your development if you have not done so already. 
 
 ### Initializing
 
-After installing `greenkey-voice-sdk.js` in your project, import it like any other module.
+After installing `greenkey-intercom-sdk.js` in your project, import it like any other module.
 
 ```javascript
-import GreenKey from 'greenkey-voice-sdk';
+import GreenKey from 'greenkey-intercom-sdk';
 ```
 
 Then you can initialize it with the target endpoint. The endpoint used for sandboxing is "`voice-sandbox.greenkeytech.com`".
@@ -19,7 +19,7 @@ const GK = new GreenKey(`https://${endpoint}`);
 
 ### User Creation
 
-You must have multiple accounts created before you can begin using the intercom functionality of the GreenKey Voice SDK. Let's create one now. All we need is a passphrase.
+You must have multiple accounts created before you can begin using the intercom functionality of the GreenKey Intercom SDK. Let's create one now. All we need is a passphrase.
 
 ```javascript
 // run the following in the body of an async function
